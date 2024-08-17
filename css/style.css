@@ -23,9 +23,12 @@ li {
   margin-top: 20px;
 }
 
-img {
-  border: 5px solid blue;
+figure {
+  border: 5px solid greenyellow;
   border-radius: 35px;
+  overflow: hidden;
+}
+img {
   width: 100%;
 }
 
@@ -45,7 +48,7 @@ img {
   .grid {
     grid-template-columns: auto auto;
   }
-  img {
+  figure {
     border-radius: 50%;
   }
   .grid figure:last-child {
@@ -68,3 +71,8 @@ img {
   }
 }
 
+@media all and (prefers-color-scheme: dark) {
+  img {
+    border-color: black;
+  }
+}
