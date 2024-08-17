@@ -24,7 +24,7 @@ li {
 }
 
 figure {
-  border: 5px solid greenyellow;
+  border: 5px solid blue;
   border-radius: 35px;
   overflow: hidden;
 }
@@ -60,7 +60,7 @@ img {
   figure:nth-of-type(3n) {
     grid-column: 1 / span 2;
   }
-  img {
+  figure {
     border-radius: 0;
   }
 }
@@ -72,7 +72,9 @@ img {
 }
 
 @media all and (prefers-color-scheme: dark) {
-  img {
+  figure {
+    background-color: #0f0f0f;
+    color: yellow;
     border-color: black;
   }
 }
