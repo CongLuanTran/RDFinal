@@ -34,3 +34,37 @@ img {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+@media all and (min-width: 772px) {
+  .grid {
+    grid-template-columns: auto auto;
+  }
+  img {
+    border-radius: 50%;
+  }
+  .grid figure:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media all and (min-width: 992px) {
+  figure:nth-of-type(3n) {
+    grid-column: 1 / span 2;
+  }
+  img {
+    border-radius: 0;
+  }
+}
+
+@media all and (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
